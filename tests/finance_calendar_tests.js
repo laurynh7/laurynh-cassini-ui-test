@@ -12,18 +12,18 @@ const TESTDATA = [
     {eventName: 'Earnings', eventCount: '27'},
     {eventName: 'Stock splits', eventCount: '20'},
     {eventName: 'IPO pricing', eventCount: '4'},
-    {eventName: 'Economic events', eventCount: '36'}
+    {eventName: 'Economic events', eventCount: '33'}
     ]
 
-fixture `Finance Tests`
-    .page`https://uk.finance.yahoo.com/calendar`;
+fixture `Finance Calendar Tests`
+    .page`https://uk.yahoo.com/`;
 
 
 
 test('Check Finance Calendar Events', async t => {
 
     // GIVEN the yahoo home page
-    await HomePage.accept_cookies()
+    await HomePage.acceptCookies()
     await t
         .expect(HomePage.pageTitle.exists).ok; 
     

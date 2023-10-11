@@ -10,8 +10,7 @@
     "testcafe": "*"
   },
   "scripts": {
-    "test": "testcafe chrome tests/financials.js",
-    "debug": "testcafe chrome tests/finance-calendar-tests.js --debug-on-fail"
+    "test": "testcafe chrome tests/"
   }
 
 }

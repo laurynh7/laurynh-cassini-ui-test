@@ -7,17 +7,15 @@ class HomePage {
         this.scrollButton = Selector('#scroll-down-btn')
         this.cookiesConsentPage = Selector('[id="consent-page"]');
         this.cookiesAgreeButton = Selector('[name="agree"]');
-        this.login_button = Selector('#ybarAccountProfile');
-        this.financeButton = Selector('#root_7')
+        this.signInButton = Selector('#ybarAccountProfile');
+        this.financeButton = Selector('#root_7').withText('Finance')
+        this.accountMenuButton = Selector('#ybarAccountMenuOpener')
+        this.accountMenu = Selector('#ybarAccountMenuBody').child()
+
 
     }
 
-    async navigate_to_page(page){
-        await t.navigateTo(page)
-    }
-
-
-    async accept_cookies() {
+    async acceptCookies() {
         if (await this.cookiesConsentPage.exists) {
             if (await this.scrollButton.exists) {
                 await t

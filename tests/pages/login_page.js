@@ -2,26 +2,28 @@ import { Selector, t } from 'testcafe';
 
 class LoginPage{
     constructor() {
-        this.login_page = Selector('#login-body')
-        this.login_input = Selector('#login-username')
-        this.login_button = Selector('#login-signin')
-        this.password_input = Selector('#login-passwd')
+        this.loginInput = Selector('#login-username')
+        this.loginButton = Selector('#login-signin')
+        this.passwordInput = Selector('#login-passwd')
+        this.loginErrorMessage = Selector('#username-error')
+        this.passwordErrorMessage = Selector('.error-msg')
+        this.yahooLogo = Selector(".logo")
     }
 
-    async input_username(username){
+    async inputUsername(username){
         await t
-            .typeText(this.login_input, username)
-            .click(this.login_button)
+            .typeText(this.loginInput, username)
+            .click(this.loginButton)
             
     }
 
-    async input_password(password){
+    async inputPassword(password){
         await t
-            .typeText(this.password_input, pasword)
-            .click(this.login_button)
+            .typeText(this.passwordInput, password)
+            .click(this.loginButton)
     }
 
-    async click_recaptcha(){
+    async clickRecaptcha(){
         if (await Selector('#recaptcha-challenge').exists){
             await t
                 .switchToIframe(Selector('#recaptcha-iframe'))
