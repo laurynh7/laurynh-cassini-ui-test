@@ -3,9 +3,8 @@ const { Selector, t } = require('testcafe') ;
 
 class YahooFinancePage {
     constructor() {
-        this.marketDataButton = Selector('[title="Market Data"]');
-        this.cryptoButton = Selector('[title="Crypto"]');
-        this.marketDataCalendarButton = Selector('a[title="Calendar"]');
+        this.marketDataButton = Selector('div[title="Market Data"]');
+        this.marketDataCalendarButton = Selector('a[title="Calendar"]', { visibilityCheck: true });
     }
 }
 
