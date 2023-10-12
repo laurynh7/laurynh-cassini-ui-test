@@ -4,6 +4,8 @@
 Test project testing the login and finance calendar for Yahoo.com.
 Please note the login tests may fail due to reCaptcha.
 
+* Please add required passwords to tests/test_data/Credentials.xlsx 
+
 ### Built With
 
 Built using TestCafe
